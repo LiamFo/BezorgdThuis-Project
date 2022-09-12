@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>BezorgdThuis</title>
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="Taskbar">
+
+    <span class="menu_button" style="position: fixed;z-index:1;margin-top:30px;margin-left:10px;" onclick="openNav()">&#9776; Menu</span>
+    <i class="material-icons Title" style="margin-top:40px;margin-left:40%;font-size:50px;">dining</i><h1 class="Title" style="margin-top:-45px;">BezordThuis</h1>
+    <div id="Menu" class="menuside">
+      <a class="menuclose" onclick="closeNav()">&times;</a>
+
+      <i class="material-icons" style="margin-top: 10px;">person</i><a href="account.html" style="margin-top: -40px;">Account</a>
+      <i class="material-icons" style="margin-top: 30px;">info</i><a href="info.html" style="margin-top: -40px;">Informatie</a>
+      <i class="material-icons" style="margin-top: 30px;">dining</i><a href="menu.html" style="margin-top: -40px;">Gerechten</a>
+      <i class="material-icons" style="margin-top: 30px;">trolley</i><a href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
+    </div>
+    
+</body>
+
+<script>
+    function openNav() {
+      document.getElementById("Menu").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("Menu").style.width = "0";
+    }
+    </script>
+</html>
