@@ -9,25 +9,44 @@
 <body>
     <div class="Taskbar">
 
-    <span class="menu_button" style="position: fixed;z-index:1;margin-top:30px;margin-left:10px;" onclick="openNav()">&#9776; Menu</span>
-    <i class="material-icons Title" style="margin-top:40px;margin-left:40%;font-size:50px;">dining</i><h1 class="Title" style="margin-top:-45px;">BezordThuis</h1>
+    <span class="menu_button" onclick="openNav()">&#9776; Menu</span>
+    <i class="material-icons" style="margin-top:40px;margin-left:460px;font-size:50px;">dining</i><h1 class="Title" style="margin-top:-45px;">BezordThuis</h1>
     <div id="Menu" class="menuside">
       <a class="menuclose" onclick="closeNav()">&times;</a>
-
       <i class="material-icons" style="margin-top: 10px;">person</i><a href="account.html" style="margin-top: -40px;">Account</a>
       <i class="material-icons" style="margin-top: 30px;">info</i><a href="info.html" style="margin-top: -40px;">Informatie</a>
       <i class="material-icons" style="margin-top: 30px;">dining</i><a href="menu.html" style="margin-top: -40px;">Gerechten</a>
       <i class="material-icons" style="margin-top: 30px;">trolley</i><a href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
     </div>
-    
+
+    <i class="material-icons" style="margin-top:110px;margin-left:410px;color:orange;font-size:150px;">info</i>
+    <i class="material-icons" style="margin-top:110px;margin-left:100px;color:orange;font-size:150px;">dining</i>
+    <i class="material-icons" style="margin-top:110px;margin-left:110px;color:orange;font-size:150px;">trolley</i>
+    <br>
+    <br>
+    <a href="info.html" class="Bigtext Button" style="margin-top:-40px;margin-left:415px;">Informatie</a>
+    <a href="menu.html" class="Bigtext Button" style="margin-top:-40px;margin-left:105px;">Gerechten</a>
+    <a href="winkelwagen.html"class="Bigtext Button" style="margin-top:-40px;margin-left:90px;">Winkelwagen</a>
+  </div>
+
+
+  <div class="ExtraBar"></div> <!--white bar-->
+  <div class="ShapeThing"></div> <!--sloped orange-->
+  <div class="ImageThing"></div> <!--sloped white/image-->
+  <div class="ExtraExtraBar"></div>
+  <div class="ExtraExtraBar" style="margin-top:-40px;"></div>
+
+    <div class="ExtraBar" style="margin-top:-10px;"></div>
+
+    <div class="TitleText" style="margin-top:520px;margin-left:60px;" >Test</div>
 </body>
 
 <script>
-    function openNav() {
+    function openNav(){
       document.getElementById("Menu").style.width = "250px";
     }
     
-    function closeNav() {
+    function closeNav(){
       document.getElementById("Menu").style.width = "0";
     }
     </script>
