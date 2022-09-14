@@ -6,6 +6,7 @@
 body {
   background-color: rgb(255, 128, 0);
 }
+
 .Taskbar{
     width:101%;
     padding:0px;
@@ -13,6 +14,11 @@ body {
     background-color: rgb(255, 128, 0);
     margin-top:-22px;
     margin-left:-8px;
+}
+
+.TopButton{
+  border:black 2px;
+  border-radius: 10px;
 }
 
 .ExtraBar{
@@ -52,13 +58,21 @@ body {
   clip-path: polygon(100% 0, 100% 50%, 90% 100%, 25% 100%, 50% 0);
   float:right;
   margin-right:-600px;
+  padding:0;
 }
 
-.Title{
-    color:white;
-    font-size:30px;
-    font-family:Arial;
-    margin-left:46%;
+.Title {
+  color:white;
+  font-size:30px;
+  font-family:Arial;
+  margin-left:46%;
+}
+
+div.image::before {
+  content:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+  width:500px;
+  height:300px;
+  margin-left:-300px;
 }
 
 .TitleText{
@@ -68,11 +82,21 @@ body {
   font-family:Arial;
 }
 
+.SubText{
+  color:white;
+  font-size:20px;
+  font-family:Arial;
+  margin-top:10px;
+  margin-left:60px;
+}
+
 .TitleLine{
   Width:350px;
   height:5px;
   background-color: rgb(255, 255, 255);
   text-shadow:0px 1.5px rgb(231, 231, 231);
+  margin-top:-56px;
+  margin-left:150px;
 }
 
 .Button{
@@ -141,10 +165,11 @@ body {
   }
 
   .menu_button{
-    font-family: Verdana;
+    font-family: Arial;
     font-size:40px;
     cursor: pointer;
-    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    color:white;
+    text-shadow:0px 1.5px rgb(231, 231, 231);
     z-index:1;
     margin-top:70px;
     margin-left:10px;
