@@ -61,15 +61,11 @@ body {
   padding:0;
 }
 
-.flip{
-  transform:scaleX(-1);
-}
-
 .Title {
   color:white;
   font-size:30px;
   font-family:Arial;
-  margin-left:43%;
+  margin-left:46%;
 }
 
 div.image::before {
@@ -77,13 +73,6 @@ div.image::before {
   width:500px;
   height:300px;
   margin-left:-300px;
-}
-
-div.image2:before {
-  content:url("https://imageio.forbes.com/specials-images/imageserve/5fc9284c22a16f3757f95c9e/BBQ-hamburger-table-scene--top-view-over-dark-wood/960x0.jpg?format=jpg&width=960");
-  width:500px;
-  height:300px;
-  margin-left:172px;
 }
 
 .TitleText{
@@ -106,8 +95,8 @@ div.image2:before {
   height:5px;
   background-color: rgb(255, 255, 255);
   text-shadow:0px 1.5px rgb(231, 231, 231);
-  margin-top:-26px;
-  margin-left:530px;
+  margin-top:-56px;
+  margin-left:150px;
 }
 
 .Button{
@@ -126,13 +115,6 @@ div.image2:before {
   font-weight:bold;
   text-decoration: none;
   text-shadow:0px 1.5px rgb(209, 105, 1);
-}
-
-.Smalltext{
-  font-family:Arial;
-  font-size:20px;
-  color: rgb(255, 128, 0);
-  font-weight:bold;
 }
 
 .material-icons{
@@ -200,7 +182,7 @@ div.image2:before {
     color: #413b3b;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 15px;
   }
   
   h5 {
@@ -212,15 +194,16 @@ div.image2:before {
     line-height: 1.7;
   }
 
-  .button {
+  button {
+    margin-bottom: 20px;
+    margin-left: 20px;
     font-size: 1em;
-    padding: 15px 35px;
+    padding: 10px 30px;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    background: #403e3d;
-    border-radius: 50px;
+    background: #d46b15;
   }
 
   .login-overlay{
@@ -312,6 +295,15 @@ div.image2:before {
     border: none;
     border-radius: 50px;
   }
+
+  a {
+    text-decoration:none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
 
 
 .LoginText{
