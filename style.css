@@ -61,11 +61,15 @@ body {
   padding:0;
 }
 
+.flip{
+  transform:scaleX(-1);
+}
+
 .Title {
   color:white;
   font-size:30px;
   font-family:Arial;
-  margin-left:46%;
+  margin-left:43%;
 }
 
 div.image::before {
@@ -73,6 +77,13 @@ div.image::before {
   width:500px;
   height:300px;
   margin-left:-300px;
+}
+
+div.image2:before {
+  content:url("https://imageio.forbes.com/specials-images/imageserve/5fc9284c22a16f3757f95c9e/BBQ-hamburger-table-scene--top-view-over-dark-wood/960x0.jpg?format=jpg&width=960");
+  width:500px;
+  height:300px;
+  margin-left:172px;
 }
 
 .TitleText{
@@ -95,8 +106,8 @@ div.image::before {
   height:5px;
   background-color: rgb(255, 255, 255);
   text-shadow:0px 1.5px rgb(231, 231, 231);
-  margin-top:-56px;
-  margin-left:150px;
+  margin-top:-26px;
+  margin-left:530px;
 }
 
 .Button{
@@ -115,6 +126,13 @@ div.image::before {
   font-weight:bold;
   text-decoration: none;
   text-shadow:0px 1.5px rgb(209, 105, 1);
+}
+
+.Smalltext{
+  font-family:Arial;
+  font-size:20px;
+  color: rgb(255, 128, 0);
+  font-weight:bold;
 }
 
 .material-icons{
