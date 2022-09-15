@@ -21,6 +21,7 @@
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
     </div>
 
+    
     <i class="material-icons" style="margin-top:110px;margin-left:410px;color:orange;font-size:150px;">info</i>
     <i class="material-icons" style="margin-top:110px;margin-left:100px;color:orange;font-size:150px;">dining</i>
     <i class="material-icons" style="margin-top:110px;margin-left:110px;color:orange;font-size:150px;">trolley</i>
@@ -33,7 +34,7 @@
 
   <div class="login-overlay" id="login-div">
     <div class="wrapper">
-      <h2>Login</h2>
+      <h2 style="font-family:'Arial';">Login</h2>
       <a href="#" class="close">&times;</a>
       <div class="login-content">
         <div class="container-login">
@@ -44,10 +45,10 @@
             <?php if (isset($_GET['logout'])) { ?>
             <p class="logout"><?php echo $_GET['logout'];?></p>
             <?php } ?>
-                <label for="email">Email</label>
+                <label class="LoginText" for="email">Email</label>
                 <input type="text" name="email" required>
 
-                <label for="password">password</label>
+                <label class="LoginText" for="password">password</label>
                 <input type="password" name="password">
 
                 <button type="submit" class="btn">Login</button>

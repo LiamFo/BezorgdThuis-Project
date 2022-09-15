@@ -314,3 +314,8 @@ div.image2:before {
   }
 
 
+.LoginText{
+  font-family: "Arial";
+  color:white;
+  font-weight:bold;
+}
