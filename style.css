@@ -182,7 +182,7 @@ div.image::before {
     color: #413b3b;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 15px;
   }
   
   h5 {
@@ -194,15 +194,16 @@ div.image::before {
     line-height: 1.7;
   }
 
-  .button {
+  button {
+    margin-bottom: 20px;
+    margin-left: 20px;
     font-size: 1em;
-    padding: 15px 35px;
+    padding: 10px 30px;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    background: #403e3d;
-    border-radius: 50px;
+    background: #d46b15;
   }
 
   .login-overlay{
@@ -294,5 +295,14 @@ div.image::before {
     border: none;
     border-radius: 50px;
   }
+
+  a {
+    text-decoration:none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
 
 
