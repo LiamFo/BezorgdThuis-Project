@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>BezorgdThuis</title>
     <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -15,7 +15,7 @@
 
     <div id="Menu" class="menuside">
       <a class="menuclose" onclick="closeNav()">&times;</a>
-      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a href="account.html" style="margin-top: -40px;">Account</a>
+      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a href="#login-div" style="margin-top: -40px;">Account</a>
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">info</i><a href="info.html" style="margin-top: -40px;">Informatie</a>
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">dining</i><a href="menu.html" style="margin-top: -40px;">Gerechten</a>
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
@@ -29,6 +29,34 @@
     <a href="info.html" class="Bigtext Button" style="margin-top:-40px;margin-left:415px;">Informatie</a>
     <a href="menu.html" class="Bigtext Button" style="margin-top:-40px;margin-left:105px;">Gerechten</a>
     <a href="winkelwagen.html"class="Bigtext Button" style="margin-top:-40px;margin-left:90px;">Winkelwagen</a>
+  </div>
+
+  <div class="login-overlay" id="login-div">
+    <div class="wrapper">
+      <h2>Login</h2>
+      <a href="#" class="close">&times;</a>
+      <div class="login-content">
+        <div class="container-login">
+        <form action="login.php" class="form-container" method="POST">
+            <?php if (isset($_GET['error'])) { ?>
+            <p class="error"><?php echo $_GET['error'];?></p>
+            <?php } ?>
+            <?php if (isset($_GET['logout'])) { ?>
+            <p class="logout"><?php echo $_GET['logout'];?></p>
+            <?php } ?>
+                <label for="email">Email</label>
+                <input type="text" name="email" required>
+
+                <label for="password">password</label>
+                <input type="password" name="password">
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 
