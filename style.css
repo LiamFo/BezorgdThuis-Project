@@ -3,6 +3,10 @@
   font-size:15px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
 background-color: rgb(255, 128, 0);
 }
@@ -109,13 +113,13 @@ margin-top:-26px;
 margin-left:530px;
 }
 
-.Button{
-transition: all .2s ease-in-out;
+.ButtonFix{
+  background-color: transparent;
+  border:transparent;
 }
 
 .Button:hover{
 cursor: pointer;
-transform: scale(1.1);
 }
 
 .Bigtext{
@@ -238,6 +242,7 @@ button {
 #login-div:target {
   visibility: visible;
   opacity: 1;
+  z-index:10;
 }
 
 .wrapper {
@@ -248,6 +253,7 @@ button {
   width: 30%;
   position: relative;
   transition: all 5s ease-in-out;
+  z-index:12312;
 }
 
 .wrapper h2 {
@@ -283,7 +289,7 @@ form label {
   letter-spacing: 3px;
 }
 
-input[type=text] {
+input[type=email] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -313,15 +319,13 @@ input[type="submit"] {
   border-radius: 50px;
 }
 
-a {
+.Aa {
   text-decoration:none;
 }
 
-a:hover {
+.Aa:hover {
   text-decoration: underline;
 }
-
-
 
 .LoginText{
 font-family: "Arial";
@@ -331,4 +335,14 @@ font-weight:bold;
 
 .flip{
 transform:scaleX(-1);
+}
+
+.InfoText{
+  transform:scaleX(-1);
+  margin-top:-300px;
+  margin-left:0px;
+  float:left;
+  color:white;
+  font-size:26px;
+  font-family:Arial;
 }
