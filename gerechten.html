@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="registratie.css">
+    <link rel="stylesheet" href="blank.css">
+    <title>BezorgdThuis</title>
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="Taskbar" style="clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);height:150px;">
+
+    <span class="menu_button TopButton" onclick="openNav()">&#9776; Menu</span>
+    <i class="material-icons" style="margin-top:40px;margin-left:430px;font-size:50px;">dining</i>
+    <h1 class="Title" style="margin-top:-45px;">Gerechten</h1>
+
+    <div id="Menu" class="menuside">
+      <a class="menuclose" onclick="closeNav()">&times;</a>
+      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a class="Aa" href="#login-div" style="margin-top: -40px;">Account</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">house</i><a class="Aa" href="index.html" style="margin-top: -40px;">Home</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a class="Aa" href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
+    </div>
+
+    <!-- LOGIN -->
+
+<div class="login-overlay" id="login-div">
+    <div class="wrapper">
+      <h2 style="font-family:'Arial';">Login</h2>
+      <a href="#" class="close">&times;</a>
+      <div class="login-content">
+        <div class="container-login">
+        <form action="login.php" class="form-container" method="POST">
+            <?php if (isset($_GET['error'])) { ?>
+            <p class="error"><?php echo $_GET['error'];?></p>
+            <?php } ?>
+            <?php if (isset($_GET['logout'])) { ?>
+            <p class="logout"><?php echo $_GET['logout'];?></p>
+            <?php } ?>
+                <label class="LoginText" for="email">Email</label>
+                <input type="email" name="email" required>
+  
+                <label class="LoginText" for="password">password</label>
+                <input type="password" name="password">
+  
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+        <h3>Geen account?<a href="#regisratie-div"> klik hier</a></h3>
+      </div>
+    </div>
+  </div>
+  
+  <!--  -->
+  
+  <!-- REGISTATIE  -->
+  
+  <div class="regisratie-overlay" id="regisratie-div">
+    <div class="wrapper">
+      <h2 style="font-family:'Arial';">Registeren</h2>
+      <a href="#" class="close">&times;</a>
+      <div class="regisratie-content">
+        <div class="container-regisratie">
+        <form action="login.php" class="form-container" method="POST">
+            <?php if (isset($_GET['error'])) { ?>
+            <p class="error"><?php echo $_GET['error'];?></p>
+            <?php } ?>
+            <?php if (isset($_GET['logout'])) { ?>
+            <p class="logout"><?php echo $_GET['logout'];?></p>
+            <?php } ?>
+                <label class="LoginText" for="naam">Naam</label>
+                <input type="text" name="email" required>
+  
+                <label class="LoginText" for="email">Email</label>
+                <input type="text" name="email" required>
+  
+                <label class="LoginText" for="password">password</label>
+                <input type="password" name="password">
+  
+                <button type="submit" class="btn">Registeren</button>
+                              
+                <select id="kies" name="type-klant">
+                  <option value="Klant">Klant</option>
+                  <option value="Bedrijf">Bedrijf</option>
+                </select>
+            </form>
+        </div>
+        <h3><a href="#login-div">Ik heb al een account</a></h3>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div>
+
+    
+    <div class="FoodDisplay">
+        <img class="FoodImage" src="https://media.istockphoto.com/photos/turkey-dinner-plate-picture-id174985454?k=20&m=174985454&s=612x612&w=0&h=E28B7mWKsB6y6ypvTBRu0ftW8_YR3I1hO3fdv3UA9xc="
+        alt="food" style="width:220px;height:auto;margin-left:40px;margin-top:25px;">
+    <h1 class="FoodText" >Food Name Here</h1>
+    <h1 class="RestaurantName">Text here</h1>
+  </div>
+  
+
+  
+
+        <div class="ExtraBar" style="height:1000px;"></div> <!--white cube top-->
+</body>
+<script>
+    function openNav(){
+      document.getElementById("Menu").style.width = "250px";
+    }
+    
+    function closeNav(){
+      document.getElementById("Menu").style.width = "0";
+    }
+
+    function ScrollView(){
+    const element = document.getElementById("intro_part");
+    element.scrollIntoView();
+}
+    </script>
+</html>
