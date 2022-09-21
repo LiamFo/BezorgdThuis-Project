@@ -131,6 +131,15 @@ text-decoration: none;
 text-shadow:0px 1.5px rgb(209, 105, 1);
 }
 
+.Biggertext{
+  font-family:Arial;
+  font-size:50px;
+  color: rgb(255, 128, 0);
+  font-weight:bold;
+  text-decoration: none;
+  text-shadow:0px 1.5px rgb(209, 105, 1);
+  }
+
 .Smalltext{
   font-family:Arial;
   font-size:20px;
@@ -142,11 +151,6 @@ text-shadow:0px 1.5px rgb(209, 105, 1);
   font-size:28px;
   color:white;
   text-shadow:0px 1.5px rgb(209, 105, 1);
-}
-
-.material-icons2{
-font-size:28px;
-color:rgb(255, 128, 0);
 }
 
 .menuside {
@@ -349,7 +353,7 @@ transform:scaleX(-1);
 
 .FoodDisplay{
   border-color:rgb(231, 231, 231);
-  background-color:rgb(242, 242, 242);
+  background-color:white;
   border-style:solid;
   border-radius:15px;
   height:400px;
@@ -364,6 +368,7 @@ transform:scaleX(-1);
   font-weight:bold;
   margin-left:64px;
   font-size:20px;
+  margin-left:75px;
 }
 
 .FoodImage{
@@ -373,9 +378,101 @@ transform:scaleX(-1);
   padding:0;
 }
 
+.FoodPrice{
+  font-family:Arial;
+  font-weight:bold;
+  margin-left:64px;
+  font-size:20px;
+  margin-left:125px;
+}
+
 .RestaurantName{
   font-family:Arial;
   font-size:15px;
   color:gray;
-  margin-left:111px;
+  margin-left:115px;
+}
+
+.FoodButton{
+  text-decoration: none;
+  border:2px green;
+  background-color:lightgreen;
+  box-shadow:0px 2px 5px rgb(231, 231, 231);
+  border-style:solid;
+  transition: 0.2s ease-in-out;
+  margin-left:100px;
+  width:100px;
+  height:50px;
+  position: relative;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.2s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.FoodButton:hover{
+  transform:scale(1.05);
+  border: lightgreen;
+  background-color:green;
+}
+
+.FoodButton:after {
+  content: "";
+  background: white;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -40px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.FoodButton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#fader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  pointer-events: none;
+  background:white;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+  from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+#fader.fade-out {
+  opacity: 0;
+  animation-name: fade-out;
+}
+
+#fader.fade-in {
+  opacity: 1;
+  animation-name: fade-in;
+}
+
+.LoginButton{
+  cursor: pointer;
 }

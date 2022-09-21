@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="registratie.css">
     <link rel="stylesheet" href="blank.css">
     <title>BezorgdThuis</title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <div class="Taskbar" style="clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);height:150px;">
+    <div class="Taskbar">
 
     <span class="menu_button TopButton" onclick="openNav()">&#9776; Menu</span>
     <i class="material-icons" style="margin-top:40px;margin-left:430px;font-size:50px;">dining</i>
@@ -98,6 +98,8 @@
         alt="food" style="width:220px;height:auto;margin-left:40px;margin-top:25px;">
     <h1 class="FoodText" >Food Name Here</h1>
     <h1 class="RestaurantName">Text here</h1>
+    <h1 class="FoodPrice">$7.99</h1>
+    <button class="FoodButton">Add</button>
   </div>
   
 
@@ -113,10 +115,5 @@
     function closeNav(){
       document.getElementById("Menu").style.width = "0";
     }
-
-    function ScrollView(){
-    const element = document.getElementById("intro_part");
-    element.scrollIntoView();
-}
     </script>
 </html>
