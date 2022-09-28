@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registratie.css">
+    <link rel="stylesheet" href="blank.css">
+    <title>BezorgdThuis</title>
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="BackgroundImage2">
+  <svg id="fader"></svg>
+    <div class="Taskbar">
+
+        <span class="menu_button TopButton" onclick="openNav()">&#9776; Menu</span>
+        <i class="material-icons" style="margin-top:30px;margin-left:430px;font-size:50px;opacity:0;">dining</i>
+        <h1 class="Title" style="margin-top:-45px;opacity:0;">Gerechten</h1>
+
+    <div id="Menu" class="menuside">
+      <a class="menuclose" onclick="closeNav()">&times;</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">house</i><a class="Aa" href="index.html" style="margin-top: -40px;">Home</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">dining</i><a class="Aa" href="gerechten.html" style="margin-top: -40px;">Gerechten</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a class="Aa" href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
+    </div>
+
+    <h1 class="Bigtext" style="font-size:50px;margin-left:38%;margin-top:100px;">Inloggen Als...</h1>
+    
+<p class="AlAcc">Heeft u al een account? <a class="Span" href="loginpage.php">Log in!</a></p>
+
+
+    <i class="material-icons" style="margin-top:40px;margin-left:340px;color:orange;font-size:350px;
+    border:5px orange;border-radius: 50px;">person</i>
+    <a href="KlantRegistratie.php" class="Biggertext Klant" style="margin-left:-240px;">Klant</a>
+
+
+
+    <i class="material-icons" style="margin-top:-335px;margin-left:220px;color:orange;font-size:350px;
+    border:5px orange;border-radius: 50px;">home</i>
+    <a href="RestLogin.html" class="Biggertext Klant" style="margin-left:-310px;">Restaurant</a>
+
+
+
+</body>
+<script>
+    function openNav(){
+      document.getElementById("Menu").style.width = "250px";
+    }
+    
+    function closeNav(){
+      document.getElementById("Menu").style.width = "0";
+    }
+
+    fadeInPage();
+
+    function fadeInPage() {
+        if (!window.AnimationEvent) { return; }
+        var fader = document.getElementById('fader');
+    fader.classList.add('fade-out');
+    fader.classlist.remove('fade-in');
+}
+    </script>
+</html>
