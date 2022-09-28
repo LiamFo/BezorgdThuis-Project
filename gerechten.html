@@ -17,80 +17,10 @@
 
     <div id="Menu" class="menuside">
       <a class="menuclose" onclick="closeNav()">&times;</a>
-      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a class="Aa" href="#login-div" style="margin-top: -40px;">Account</a>
+      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a class="Aa" href="LogInAs.html" style="margin-top: -40px;">Account</a>
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">house</i><a class="Aa" href="index.html" style="margin-top: -40px;">Home</a>
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a class="Aa" href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
     </div>
-
-    <!-- LOGIN -->
-
-<div class="login-overlay" id="login-div">
-    <div class="wrapper">
-      <h2 style="font-family:'Arial';">Login</h2>
-      <a href="#" class="close">&times;</a>
-      <div class="login-content">
-        <div class="container-login">
-        <form action="login.php" class="form-container" method="POST">
-            <?php if (isset($_GET['error'])) { ?>
-            <p class="error"><?php echo $_GET['error'];?></p>
-            <?php } ?>
-            <?php if (isset($_GET['logout'])) { ?>
-            <p class="logout"><?php echo $_GET['logout'];?></p>
-            <?php } ?>
-                <label class="LoginText" for="email">Email</label>
-                <input type="email" name="email" required>
-  
-                <label class="LoginText" for="password">password</label>
-                <input type="password" name="password">
-  
-                <button type="submit" class="btn">Login</button>
-            </form>
-        </div>
-        <h3>Geen account?<a href="#regisratie-div"> klik hier</a></h3>
-      </div>
-    </div>
-  </div>
-  
-  <!--  -->
-  
-  <!-- REGISTATIE  -->
-  
-  <div class="regisratie-overlay" id="regisratie-div">
-    <div class="wrapper">
-      <h2 style="font-family:'Arial';">Registeren</h2>
-      <a href="#" class="close">&times;</a>
-      <div class="regisratie-content">
-        <div class="container-regisratie">
-        <form action="login.php" class="form-container" method="POST">
-            <?php if (isset($_GET['error'])) { ?>
-            <p class="error"><?php echo $_GET['error'];?></p>
-            <?php } ?>
-            <?php if (isset($_GET['logout'])) { ?>
-            <p class="logout"><?php echo $_GET['logout'];?></p>
-            <?php } ?>
-                <label class="LoginText" for="naam">Naam</label>
-                <input type="text" name="email" required>
-  
-                <label class="LoginText" for="email">Email</label>
-                <input type="text" name="email" required>
-  
-                <label class="LoginText" for="password">password</label>
-                <input type="password" name="password">
-  
-                <button type="submit" class="btn">Registeren</button>
-                              
-                <select id="kies" name="type-klant">
-                  <option value="Klant">Klant</option>
-                  <option value="Bedrijf">Bedrijf</option>
-                </select>
-            </form>
-        </div>
-        <h3><a href="#login-div">Ik heb al een account</a></h3>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div>
 
     
     <div class="FoodDisplay">
