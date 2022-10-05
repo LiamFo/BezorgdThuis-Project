@@ -1,0 +1,12 @@
+h2 {
+    text-align: center;
+    right: 45%;
+     color: #413b3b;
+  font-weight: 900;
+  font-size: 65px;
+}
+
+#opties {
+    display: grid;
+    grid-template-columns: auto auto auto
+}
