@@ -502,7 +502,17 @@ input[type=submit]:hover {
   background-color: #555555;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
 .FormBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border:5px blue;
   border-radius: 25px;
   background-color: #f2f2f2;
@@ -511,8 +521,13 @@ input[type=submit]:hover {
   margin:0px;
   font-family:Arial;
   font-weight:bolder;
-  margin-top:0px;
-  margin-left:500px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .BackgroundImage{

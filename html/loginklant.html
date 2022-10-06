@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="registratie.css">
-    <link rel="stylesheet" href="blank.css">
-    <title>BezorgdThuis</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/registratie.css">
+    <link rel="stylesheet" href="../css/blank.css">
+    <title>BezorgdThuis - inlog voor klant</title>
     <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -15,18 +15,19 @@
         <a href="loginals.html" style="text-decoration: none;color:#ff6a04;">&larr;Back</a>
     </div>
 
-    <div class="FormBox" style="margin-top:150px;">
-        <form action="login.php" method="POST">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+    <section class="form-container">
+        <div class="FormBox" style="margin-top:150px;">
+            <form action="../php/loginklant.php" method="POST">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-          <label for="password">Wachtwoord</label>
-          <input type="password" id="password" name="password" required>
-
+                <label for="pass">Wachtwoord</label>
+                <input type="password" id="password" name="password" required>
         
-          <input type="submit" value="Submit">
+                <input type="submit" value="Submit">
         </form>
       </div>
+    </section>
 
 </body>
 <script>
