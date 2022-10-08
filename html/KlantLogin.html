@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registratie.css">
+    <link rel="stylesheet" href="blank.css">
+    <link rel="stylesheet" href="gridsheet.css">
+    <title>BezorgdThuis</title>
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="BackgroundImage">
+    <svg id="fader"></svg>
+
+    <div class="Back">
+        <a href="LogInAs.html" style="text-decoration: none;color:#ff6a04;">&larr;Back</a>
+    </div>
+
+<<<<<<< HEAD
+    <div class="FormBox grid-container">
+        <form class="" action="index.html">
+          <label for="fname" id="grid-0">Naam</label>
+          <input type="text" id="grid-1" name="name" required>
+=======
+    <div class="FormBox">
+        <form action="index.html">
+          <label for="fname">Naam</label>
+<<<<<<< HEAD
+          <input type="text" id="name" name="name" required>
+=======
+<<<<<<< HEAD
+          <input type="text" id="fname" name="name" required>
+>>>>>>> Mike1
+>>>>>>> sprint2
+
+          <label class="grid-item" id="grid-2" for="email">Email</label>
+          <input class="grid-item" id="grid-3" type="email" name="email" required>
+      
+          <label class="grid-item" id="grid-4" for="stad">Stad</label>
+          <input class="grid-item" id="grid-5" type="text" name="stad" required>
+
+          <label class="grid-item" id="grid-6" for="straat">Straat</label>
+          <input class="grid-item" id="grid-7" type="text" name="straat" required>
+
+          <label class="grid-item" id="grid-8" for="huisnummer">Huisnummer</label>
+          <input class="grid-item" id="grid-9" type="text" name="huisnummer" required>
+          <br>
+          <label for="pass">Password</label>
+          <input type="password" id="grid-10" name="password" required>
+          </select>
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+=======
+          <input type="text" id="fname" name="name" placeholder="Your name.." required>
+>>>>>>> main
+
+          <label for="fname">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email.." required>
+      
+          <label for="lname">Address</label>
+          <input type="text" id="address" name="address" placeholder="Your address.." required>
+
+          <label for="lname">Password</label>
+          <input type="password" id="password" name="password" placeholder="Your password.." required>
+          </select>
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+</body>
+<script>
+    fadeInPage();
+
+    function fadeInPage() {
+        if (!window.AnimationEvent) { return; }
+        var fader = document.getElementById('fader');
+    fader.classList.add('fade-out');
+    fader.classlist.remove('fade-in');
+}
+    </script>
+</html>

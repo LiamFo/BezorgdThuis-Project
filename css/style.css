@@ -290,10 +290,10 @@ button {
 form label {
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 3px;
+  font-family:Arial;
 }
 
-input[type=email] {
+input {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -304,24 +304,6 @@ input[type=email] {
   resize: vertical;
 }
 
-input[type=password] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type="submit"] {
-  background-color: #413b3b;
-  color: #fff;
-  padding: 15px 50px;
-  border: none;
-  border-radius: 50px;
-}
 
 .Aa {
   text-decoration:none;
@@ -502,7 +484,17 @@ input[type=submit]:hover {
   background-color: #555555;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
 .FormBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border:5px blue;
   border-radius: 25px;
   background-color: #f2f2f2;
@@ -511,8 +503,13 @@ input[type=submit]:hover {
   margin:0px;
   font-family:Arial;
   font-weight:bolder;
-  margin-top:0px;
-  margin-left:500px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .BackgroundImage{

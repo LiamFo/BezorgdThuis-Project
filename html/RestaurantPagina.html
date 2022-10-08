@@ -1,0 +1,57 @@
+<html>
+<head>
+       <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registratie.css">
+     <link rel="stylesheet" href="Restaurant.css">
+    <title>BezorgdThuis</title>
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+<body>
+     <div class="Taskbar">
+
+    <span class="menu_button TopButton" onclick="openNav()">&#9776; Menu</span>
+    <i class="material-icons" style="margin-top:40px;margin-left:430px;font-size:50px;">dining</i>
+    <h1 class="Title" style="margin-top:-45px;">BezorgdThuis</h1>
+
+    <div id="Menu" class="menuside">
+      <a class="menuclose" onclick="closeNav()">&times;</a>
+      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a class="Aa" href="#login-div" style="margin-top: -40px;">Account</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">info</i><a class="Aa" onclick="ScrollView()" style="margin-top: -40px;">Informatie</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">dining</i><a class="Aa" href="gerechten.html" style="margin-top: -40px;">Gerechten</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a class="Aa" href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
+    </div>
+
+    </div>
+    <h2>Welkom</h2>
+    
+    <div id="opties">
+    <h4>Plaats product</h4>
+<h4>s</h4>
+        <h4>s</h4>
+
+</div>
+
+    
+    
+    
+    </body>
+
+    
+    <script>
+    function openNav(){
+      document.getElementById("Menu").style.width = "250px";
+    }
+    
+    function closeNav(){
+      document.getElementById("Menu").style.width = "0";
+    }
+
+    function ScrollView(){
+    const element = document.getElementById("intro_part");
+    element.scrollIntoView();
+}
+    </script>
+
+
+</html>
