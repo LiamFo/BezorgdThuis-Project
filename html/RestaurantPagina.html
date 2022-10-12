@@ -1,13 +1,13 @@
 <html>
 <head>
-       <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/registratie.css">
-     <link rel="stylesheet" href="../css/blank.css">
+       <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Restaurant.css">
     <title>BezorgdThuis</title>
     <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
 <body>
+
      <div class="Taskbar">
 
     <span class="menu_button TopButton" onclick="openNav()">&#9776; Menu</span>
@@ -23,14 +23,89 @@
     </div>
 
     </div>
-    <h2>Welkom</h2>
-    
-    <div id="opties">
-    <h4>Plaats product</h4>
-<h4>s</h4>
-        <h4>s</h4>
 
-</div>
+    <h2>Welkom</h2>
+   
+    
+    <h4>Plaats product</h4>
+        <button class="open-button" onclick="openForm()">Nieuw gerecht</button>
+
+
+<div class="form-popup" id="myForm">
+  <form action="../php/product.php" method="post" class="form-container">
+      <div id="opties" class="opties">
+    <h4>Plaats product</h4>
+      
+    <label for="naam"><h4>Naam:</h4></label>
+    <input type="text" placeholder="vul gerecht in" name="naam" required>
+      
+    <label for="ingredienten"><h4>Ingredienten:</h4></label>
+    <input type="text" placeholder="Voeg ingredienten toe" name="ingredienten" required>
+      
+      <label for="prijs"><h4>Prijs in €:</h4></label>
+    <input type="text" placeholder="Voer Prijs in" name="prijs" required>
+      
+      <label for="categorie">Categorie:</label>
+       
+  <select name="categorie" id="categorie">
+      <option value="pizza">Pizza</option>
+      <option value="pasta">Pasta</option>
+      <option value="Patat&snacks">Patat en snacks</option>
+      <option value="italiaans">Italiaans eten</option>
+  </select>
+
+          <div>
+      <input type="checkbox" id="Vegetarisch" name="Vegetarisch" value="Vegetarisch" style="float: left">
+  <label for="Vegetarisch">Vegetarisch</label><br> 
+          
+       <input type="checkbox" id="Vegan" name="Vegan" value="Vegan" style="float: right">
+  <label for="Vegan">Vegan</label>
+     <br>
+        <input type="checkbox" id="Biologisch" name="Biologisch" value="Biologisch" style="float: right">
+  <label for="Biologisch">Biologisch</label>
+    <br>
+      <input type="checkbox" id="Halal" name="Halal" value="Halal" style="float: right">
+  <label for="Biologisch">Halal</label>
+    <br>
+      <input type="checkbox" id="Glutenvrij" name="Glutenvrij" value="Glutenvrij" style="float: right">
+  <label for="Biologisch">Glutenvrij</label>
+          <br>
+      <input type="checkbox" id="Lactose" name="Lactose" value="Lactose" style="float: right">
+  <label for="Biologisch">Lactosevrij</label>
+              </div>
+<br><br>
+          
+      <label for="photo">Kies een foto:</label>
+
+<input 
+  type="file"
+  id="photo" 
+  name="photo"
+  accept="image/*">
+     
+     
+      <br><br>
+<a href="RestaurantPagina.html">
+    <button class="btn" type="submit">plaats product</button>
+    </a>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+       </div>
+    </form>
+    </div>
+   
+   
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+      
 
     
     
