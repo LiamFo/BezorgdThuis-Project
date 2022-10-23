@@ -1,9 +1,12 @@
 <?php
-ob_start();
-session_start();
-include("connection.php");
 
-if(isset($_POST['naam']) && isset($_POST['email']) && isset($_POST['password'])) {
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  ob_start();
+  session_start();
+  include("connection.php");
+  
+  if(isset($_POST['naam']) && isset($_POST['email']) && isset($_POST['password'])) {
     $name = $_POST['naam'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -28,7 +31,9 @@ if(isset($_POST['naam']) && isset($_POST['email']) && isset($_POST['password']))
       exit();
     }
 
-  }
+  }    
+}
+
 
 
 

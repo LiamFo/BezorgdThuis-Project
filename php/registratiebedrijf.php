@@ -1,45 +1,55 @@
 <?php
-ob_start();
-session_start();
-include("connection.php");
 
-if(isset($_POST['rnaam']) && isset($_POST['email']) && isset($_POST['wachtwoord'])) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        ob_start();
+        session_start();
+        include("connection.php");
 
-    $rnaam = $_POST['rnaam'];
-    $name = $_POST['contactnaam'];
-    $email = $_POST['email'];
-    $password = $_POST['wachtwoord'];
-
-    $city = $_POST['stad'];
-    $straat = $_POST['straat'];
-    $hnummer = $_POST['huisnummer'];
-    $number = $_POST['number'];
-    $kvk = $_POST['kvk'];
-    $btw = $_POST['btw'];
+        if(isset($_POST['rnaam']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['contactnaam']) && isset($_POST['stad']) && isset($_POST['straat']) && isset($_POST['huisnummer']) && isset($_POST['number']) && isset($_POST['kvk'])&& isset($_POST['btw'])) {
+            
+            $rnaam = $_POST['rnaam'];
+            $name = $_POST['contactnaam'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            
+            $city = $_POST['stad'];
+            $straat = $_POST['straat'];
+            $hnummer = $_POST['huisnummer'];
+            $number = $_POST['number'];
+            $kvk = $_POST['kvk'];
+            $btw = $_POST['btw'];
+            
+        
+            
+        
+            $hashed = password_hash($password, PASSWORD_DEFAULT);
+            
+        
+            //  check kvk already exits
+            $checkkvk = "SELECT kvk FROM bedrijf WHERE kvk='$email'";
+            $result = mysqli_query($conn, $checkemail);
     
-
-    
-
-    $hashed = password_hash($password, PASSWORD_DEFAULT);
-  
-    $checkemail = "SELECT email FROM bedrijf WHERE email='$email'";
-    $result = mysqli_query($conn, $checkemail);
-    
-    if(mysqli_num_rows($result) > 0) {
-      echo 'Sorry... email already taken'; 
-    } else {
-      $q = "INSERT INTO bedrijf (naambedrijf, stad, straat, huisnummer, contactnaam, contacttelefoon, contactemail, kvk, btwnummer, wachtwoord) VALUES('$rnaam', '$city', '$straat', '$hnummer', '$name', '$number', '$email', '$kvk', '$btw', '$hashed')";
-      $submit = mysqli_query($conn, $q);
-      echo 'Saved!';
-      print_r($submit);
-        //   header('Location: ../html/loginbedrijf.html');
-        //   exit();
+            // check of email already exists
+            $checkemail = "SELECT email FROM bedrijf WHERE email='$email'";
+            $result2 = mysqli_query($conn, $checkemail);
+            
+            if(mysqli_num_rows($result) > 0) {
+                echo 'Sorry... kvk bestaat al';
+            } else {
+                if(mysqli_num_rows($result2) > 0) {
+                    echo 'Sorry... email already taken'; 
+                  } else {
+                    $q = "INSERT INTO bedrijf (kvk, naambedrijf, stad, straat, huisnummer, contacttelefoon, contactemail, btwnummer, password) VALUES('$kvk', '$rnaam', '$city', '$straat', '$hnummer', '$number', '$email', '$btw', '$hashed')";
+                    mysqli_query($conn, $q);
+                    header('Location: ../html/loginbedrijf.html');
+                    exit();
+                  }
+                }
+            }
+        
+        
+        } else {
     }
-
-
-}
-
-
 
 ?>
 
@@ -63,7 +73,7 @@ if(isset($_POST['rnaam']) && isset($_POST['email']) && isset($_POST['wachtwoord'
 
     <section class="form-container">
         <div class="FormBox">
-            <form action="registratiebedrijf.php" method="POST">
+            <form action="../php/registratiebedrijf.php" method="POST">
             <label for="rnaam">Naam Restaurant</label>
             <input type="text" id="rnaam" name="rnaam" required>
 
@@ -76,8 +86,8 @@ if(isset($_POST['rnaam']) && isset($_POST['email']) && isset($_POST['wachtwoord'
             <input style="width:150px;margin-left:20px;" type="text" id="huisnummer" name="huisnummer" required>
             <br>
 
-            <label for="wachtwoord">Password</label>
-            <input type="password" id="wachtwoord" name="wachtwoord" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
 
             <label for="contactnaam">contact naam</label>
             <input type="text" id="contactnaam" name="contactnaam" required>
@@ -95,7 +105,7 @@ if(isset($_POST['rnaam']) && isset($_POST['email']) && isset($_POST['wachtwoord'
             <input type="number" id="btw" name="btw" required>
 
         
-            <input type="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit">
             </form>
         </div>
     </section>

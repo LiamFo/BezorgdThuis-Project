@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/registratie.css">
     <link rel="stylesheet" href="../css/blank.css">
-    <title>BezorgdThuis - inlog voor klant</title>
+    <title>BezorgdThuis - inlog voor bedrijf</title>
     <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -12,19 +12,16 @@
     <svg id="fader"></svg>
 
     <div class="Back">
-        <a href="loginals.html" style="text-decoration: none;color:#ff6a04;">&larr;Back</a>
+        <a href="../html/loginals.html" style="text-decoration: none;color:#ff6a04;">&larr;Back</a>
     </div>
 
     <section class="form-container">
         <div class="FormBox" style="margin-top:150px;">
             <form action="../php/loginbedrijf.php" method="POST">
-                <label for="naambedrijf">naam bedrijf</label>
-                <input type="naambedrijf" id="naambedrijf" name="naambedrijf" required>
+                <label for="kvk">kvk</label>
+                <input type="number" id="kvk" name="kvk" required>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="pass">Wachtwoord</label>
+                <label for="password">Wachtwoord</label>
                 <input type="password" id="password" name="password" required>
         
                 <input type="submit" value="Submit">

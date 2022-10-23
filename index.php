@@ -32,14 +32,14 @@ $result = mysqli_query($conn, $query2);
     <br> -->
     <div class="profiel">
       <?php  echo '<h2>Welkom ' . $_SESSION["naam"] . '</h3>'; ?>
-      <a href="./php/logout.php" class="logout"><button>Login out</button></a>
+      <a href="./php/logout.php" class="logout"><button>Logout</button></a>
     </div>
 
     <div id="Menu" class="menuside">
       <a class="menuclose" onclick="closeNav()">&times;</a>
-      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a class="Aa" href="./html/loginals.html" style="margin-top: -40px;">Account</a>
+      <i class="material-icons" style="margin-top: 10px;text-shadow:none;">person</i><a class="Aa" href="../html/loginals.html" style="margin-top: -40px;">Account</a>
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">info</i><a class="Aa" onclick="ScrollView()" style="margin-top: -40px;">Informatie</a>
-      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">dining</i><a class="Aa" href="./html/gerechten.html" style="margin-top: -40px;">Gerechten</a>
+      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">dining</i><a class="Aa" href="../php/gerechten.php" style="margin-top: -40px;">Gerechten</a>
       <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a class="Aa" href="winkelwagen.html" style="margin-top: -40px;">Winkelwagen</a>
     </div>
 
@@ -54,7 +54,7 @@ $result = mysqli_query($conn, $query2);
       <i class="material-icons lower" style="color:orange;font-size:150px;">dining</i>
       <i class="material-icons lower" style="color:orange;font-size:150px;">trolley</i>
       <a href="#infomatie" class="Bigtext Button upper">Informatie</a>
-      <a href="gerechten.html" class="Bigtext Button upper">Gerechten</a>
+      <a href="../php/gerechten.php" class="Bigtext Button upper">Gerechten</a>
 
       
       <a href="winkelwagen.html"class="Bigtext Button upper"">Winkelwagen</a>
@@ -72,7 +72,7 @@ $result = mysqli_query($conn, $query2);
         <i class="material-icons" style="color:white;font-size:100px;">trolley</i>
 
         <a class="Smalltext" style="color:white;">Vul je locatie in</a>
-        <a class="Smalltext" style="color:white;">Kies je favoriete gerechten</a>
+        <a class="Smalltext" style="color:white;">Kies je gerecht</a>
         <a class="Smalltext" style="color:white;">Ontvang je eten</a>
       </div>
       <div class="ImageThing image2"></div>

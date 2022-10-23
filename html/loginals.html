@@ -10,54 +10,30 @@
 </head>
 <body class="BackgroundImage2">
   <svg id="fader"></svg>
-    <div class="Taskbar">
+  <div class="Taskbar">
+    <span class="menu_button TopButton" onclick="openNav()">&#9776; Menu</span>
+    <i class="material-icons" style="margin-top:30px;margin-left:430px;font-size:50px;opacity:0;">dining</i>
+    <h1 class="Title" style="margin-top:-45px;opacity:0;">Gerechten</h1>
+  </div>
 
-        <span class="menu_button TopButton" onclick="openNav()">&#9776; Menu</span>
-        <i class="material-icons" style="margin-top:30px;margin-left:430px;font-size:50px;opacity:0;">dining</i>
-        <h1 class="Title" style="margin-top:-45px;opacity:0;">Gerechten</h1>
+  <div id="Menu" class="menuside">
+    <a class="menuclose" onclick="closeNav()">&times;</a>
+    <i class="material-icons" style="margin-top: 30px;text-shadow:none;">house</i><a class="Aa" href="../index.html" style="margin-top: -40px;">Home</a>
+    <i class="material-icons" style="margin-top: 30px;text-shadow:none;">dining</i><a class="Aa" href="../php/gerechten.php" style="margin-top: -40px;">Gerechten</a>
+    <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a class="Aa" href="../html/Product.html" style="margin-top: -40px;">Winkelwagen</a>
+  </div>
 
-    <div id="Menu" class="menuside">
-      <a class="menuclose" onclick="closeNav()">&times;</a>
-      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">house</i><a class="Aa" href="../index.html" style="margin-top: -40px;">Home</a>
-      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">dining</i><a class="Aa" href="../html/gerechten.html" style="margin-top: -40px;">Gerechten</a>
-      <i class="material-icons" style="margin-top: 30px;text-shadow:none;">trolley</i><a class="Aa" href="../html/Product.html" style="margin-top: -40px;">Winkelwagen</a>
-    </div>
-
-    <h1 class="Bigtext" style="font-size:50px;margin-left:38%;margin-top:100px;">Inloggen Als...</h1>
+  <h1 class="Bigtext" style="font-size:50px;margin-left:38%;margin-top:100px;">Inloggen Als...</h1>
     
-<p class="AlAcc">Heeft u al een account? <a class="Span" href="../html/loginklant.html">Klant</a> | OF | <a class="Span" href="../html/loginbedrijf.html">Bedrijf</a></p>
+  <p class="AlAcc">Heeft u al een account? <a class="Span" href="../html/loginklant.html">Klant</a> | OF | <a class="Span" href="../html/loginbedrijf.html">Bedrijf</a></p>
 
-    <div class="container-1" style="display: flex; flex-direction:row; justify-content:space-around; align-items: center;">
-      <i class="material-icons" style="color:orange;font-size:350px;
-      border:5px orange;border-radius: 50px;">person</i>
-      <a href="../php/KlantRegistratie.php" class="Biggertext Klant" style="margin-left:-240px;">Klant</a>
-
-
-
-      <i class="material-icons" style="color:orange;font-size:350px;
-      border:5px orange;border-radius: 50px;">home</i>
-      <a href="../php/registratiebedrijf.php" class="Biggertext Klant" style="margin-left:-310px;">Restaurant</a>
-    </div>
-
-
-
+  <div class="container-1" style="display: flex; flex-direction:row; justify-content:space-around; align-items: center;">
+    <i class="material-icons" style="color:orange;font-size:350px;border:5px orange;border-radius: 50px;">person</i>
+    <a href="../php/KlantRegistratie.php" class="Biggertext Klant" style="margin-left:-240px;">Klant</a>
+    <i class="material-icons" style="color:orange;font-size:350px;border:5px orange;border-radius: 50px;">home</i>
+    <a href="../php/registratiebedrijf.php" class="Biggertext Klant" style="margin-left:-310px;">Restaurant</a>
+  </div>
 </body>
-<script>
-    function openNav(){
-      document.getElementById("Menu").style.width = "250px";
-    }
-    
-    function closeNav(){
-      document.getElementById("Menu").style.width = "0";
-    }
 
-    fadeInPage();
-
-    function fadeInPage() {
-        if (!window.AnimationEvent) { return; }
-        var fader = document.getElementById('fader');
-    fader.classList.add('fade-out');
-    fader.classlist.remove('fade-in');
-}
-    </script>
+  
 </html>

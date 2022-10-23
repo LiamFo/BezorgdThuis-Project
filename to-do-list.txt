@@ -1,0 +1,19 @@
+TO DO LIST:
+
+
+BEDRIJF SIDE:
+
+1. Bedrijf kan product toevoegen.
+
+2. Bedrijf informatie page
+
+3. Account manager page
+
+4. bedrijf gerecht overzicht.
+
+
+KLANT SIDE:
+
+1: klant ziet gerechten van de Bedrijf.
+
+2: Gerecht wordt in de winkelmandtje gepusht.
