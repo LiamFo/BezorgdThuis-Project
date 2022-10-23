@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/registratie.css">
+    <link rel="stylesheet" href="../css/blank.css">
+    <title>BezorgdThuis - inlog voor bedrijf</title>
+    <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/thuisbezorgd.svg" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="BackgroundImage">
+    <svg id="fader"></svg>
+
+    <div class="Back">
+        <a href="../html/loginals.html" style="text-decoration: none;color:#ff6a04;">&larr;Back</a>
+    </div>
+
+    <section class="form-container">
+        <div class="FormBox" style="margin-top:150px;">
+            <form action="../php/loginbedrijf.php" method="POST">
+                <label for="kvk">kvk</label>
+                <input type="number" id="kvk" name="kvk" required>
+
+                <label for="password">Wachtwoord</label>
+                <input type="password" id="password" name="password" required>
+        
+                <input type="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+
+</body>
+<script>
+    fadeInPage();
+
+    function fadeInPage() {
+        if (!window.AnimationEvent) { return; }
+        var fader = document.getElementById('fader');
+    fader.classList.add('fade-out');
+    fader.classlist.remove('fade-in');
+}
+    </script>
+</html>
